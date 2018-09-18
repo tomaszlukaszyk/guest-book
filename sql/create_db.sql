@@ -1,0 +1,1 @@
+CREATE DATABASE guestbook OWNER guestbookadmin;

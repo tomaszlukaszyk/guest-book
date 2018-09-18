@@ -1,0 +1,1 @@
+CREATE USER guestbookadmin WITH PASSWORD 'backto90';
