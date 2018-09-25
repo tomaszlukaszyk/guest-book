@@ -35,10 +35,11 @@ public class GuestBook implements HttpHandler {
         model.with("entries", entries);
 
         String response = template.render(model);
+        byte[] responseBytes = response.getBytes();
 
-        httpExchange.sendResponseHeaders(200, response.length());
+        httpExchange.sendResponseHeaders(200, responseBytes.length);
         OutputStream os = httpExchange.getResponseBody();
-        os.write(response.getBytes());
+        os.write(responseBytes);
         os.close();
     }
 
